@@ -1,0 +1,12 @@
+C:/Apps/kafka/kafka_2.13-3.2.0/bin/windows/zookeeper-server-start.bat  ./config/zookeeper.properties
+C:/Apps/kafka/kafka_2.13-3.2.0/bin/windows/kafka-server-start.bat ./config/server.properties
+
+
+
+
+cd C:/Apps/kafka/kafka_2.13-3.2.0/bin
+kafka-topics --bootstrap-server localhost:9092 --topic first_topic --create --partitions 3 --replication-factor 1
+kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic
+kafka-console-consumer --bootstrap-server localhost:9092 --topic first_topic
+
+
